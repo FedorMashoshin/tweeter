@@ -1,0 +1,37 @@
+.main-form{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 700;
+
+}
+
+.main-form-input{
+    width: 100%;
+    color: #545149;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    border-bottom: 3.5px solid #545149;
+    outline: none;
+}
+
+.main-bottom{
+    font-family: 'Bungee', cursive;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-button{
+    width: 100px;
+    height: 40px;
+    background-color: #4056A1;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
