@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
@@ -24,8 +24,8 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
+    <!-- ------------------------ Top nav bar (fixed) ------------------------ -->
+    <nav class="nav-top">
       <div class="logo">
         <img class ="logo-img" src="./images/seagull.png" alt="">
         <span class="logo">tweeter</span>
@@ -36,29 +36,57 @@
       </div>
     </nav>
 
-    <header>
+    <header class ="header">
       <div class="header-main">
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
           <h2 class ="header-name"><span class="white-bold">Fedor</span> Mashoshin</h2>
       </div>
   </header>
     
 
-    <!-- Page-specific (main) content here -->
+    <!-- ------------------------ Page-specific (main) content here ------------------------ -->
     <main class="main">
       <section class="main-top">
+
+        <!-- ------------------------ Form with new tweet ------------------------ -->
         <form method="POST" action="/tweets" class="main-form"">
           <label for="tweet-text">What are you humming about?</label>
-         <input name="text" id="tweet-text" placeholder="..." class="main-form-input"></input>
+          <textarea  rows="1" name="text" id="tweet-text" placeholder="..." class="main-form-input"></textarea>
           <div class ="main-bottom">
             <button class ="main-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        
+        <!-- ------------------------ Tweets list ------------------------ -->
+        <div id= "main-tweets" class="main-tweets">
+
+          <!-- Tweets header -->
+          <header class="header-tweets">
+            <div class="header-info">
+                <img class="header-info-pic" src="./images/face-scan.png" alt="">
+                <span class="header-info-name">Fedor Mashoshin</span>
+            </div>
+            <div class="header-nickname">
+              @Bataboomba
+            </div>
+          </header>
+          <!-- Tweet itself -->
+          <p class="tweets-text">Fake/dummy text where needed so that you have some content to visualize.</p>
+          <!-- Tweet footer -->
+          <footer class="footer-tweets">
+            <div class="footer-time">10 days ago</div>
+            <div class="footer-icons"> 
+              <div class="icon star">&starf;</div> 
+              <div class="icon arrow">&#8633;</div> 
+              <div class="icon heart">&#9829;</div>
+            </div>
+          </footer>
+        </div>
       </section>
     </main>
+    <script src="./scripts/composer-char-counter.js"></script>
   </body>
 </html>

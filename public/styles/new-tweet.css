@@ -1,14 +1,18 @@
+/* ===============================
+    Form to create new tweet
+=============================== */
+
 .main-form{
     margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-weight: 700;
-
 }
 
 .main-form-input{
     width: 100%;
+    resize: none;
     color: #545149;
     font-weight: 700;
     margin: 10px 0 20px 0;
@@ -34,4 +38,73 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+/* ===============================
+       List of all tweets
+=============================== */
+
+/* Whole section with tweets */
+#main-tweets{
+    margin: 70px 0;
+    border:3.5px solid #545149;
+    padding: 30px;
+    transition: all .1s;
+}
+
+#main-tweets:hover{
+box-shadow: 12px 12px 0px #5d76c2;
+}
+
+
+/* Header of tweet */
+.header-tweets, .header-info{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.header-info-pic{
+    width: 50px;
+    margin-right: 20px;
+}
+.header-nickname{
+    opacity: 0;
+    font-weight: 400;
+    transition: all .1s;
+}
+#main-tweets:hover .header-nickname{
+    opacity: 1;
+    color:#5d76c2;
+}
+
+/* Tweet content */
+.tweets-text{
+    font-weight: 400;
+}
+
+/* Footer of tweet */
+.footer-tweets{
+    margin: 20px 0;
+    border-top: 3.5px solid #545149;
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-icons{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 5%;
+    opacity: .8;
+}
+/* ------- Icons in tweeters list ------ */
+.heart:hover{
+    color:red;
+}
+.star:hover{
+    color:yellowgreen;
+}
+.arrow:hover{
+    color:#5d76c2;
 }

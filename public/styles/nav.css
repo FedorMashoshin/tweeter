@@ -1,5 +1,7 @@
-nav{
+.nav-top{
     font-family: 'Bungee', cursive;
+    position: fixed;
+    top:0;
     font-size: 30px;
     width: 100vw;
     height: 120px;
