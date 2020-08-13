@@ -19,8 +19,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+   
   </head>
 
   <body>
@@ -30,7 +29,7 @@
         <img class ="logo-img" src="./images/seagull.png" alt="">
         <span class="logo">tweeter</span>
       </div>
-      <div class="nav-new-tweet">
+      <div class="nav-new-tweet" id="nav-tweet">
         <span class ="white-bold">Write</span> a new tweet
         <div class="nav-arrow">&#8681;</div>
       </div>
@@ -47,46 +46,60 @@
     
 
     <!-- ------------------------ Page-specific (main) content here ------------------------ -->
-    <main class="main">
+    <main class="main" id="tweets-list">
       <section class="main-top">
+        <div id = "error" class="error">Some Error!</div>
 
         <!-- ------------------------ Form with new tweet ------------------------ -->
-        <form method="POST" action="/tweets" class="main-form"">
+        <form method="POST" action="/tweets" class="main-form" id="form">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea  rows="1" name="text" id="tweet-text" placeholder="..." class="main-form-input"></textarea>
+          <textarea  rows="2" name="text" id="tweet-text" placeholder="..." class="main-form-input"></textarea>
           <div class ="main-bottom">
-            <button class ="main-button" type="submit">Tweet</button>
+            <button class ="main-button" type="submit" id ="submit-tweet">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
         
         <!-- ------------------------ Tweets list ------------------------ -->
-        <div id= "main-tweets" class="main-tweets">
+   
+        <div id= "main-tweets">
 
-          <!-- Tweets header -->
-          <header class="header-tweets">
+
+        <!-- <div  class="main-tweet"> -->
+   
+          <!-- Tweets header  -->
+           <!-- <header class="header-tweets">
             <div class="header-info">
                 <img class="header-info-pic" src="./images/face-scan.png" alt="">
                 <span class="header-info-name">Fedor Mashoshin</span>
             </div>
-            <div class="header-nickname">
+            <span class="header-nickname">
               @Bataboomba
-            </div>
-          </header>
-          <!-- Tweet itself -->
-          <p class="tweets-text">Fake/dummy text where needed so that you have some content to visualize.</p>
-          <!-- Tweet footer -->
-          <footer class="footer-tweets">
+            </span>
+          </header> -->
+           <!-- Tweet itself  -->
+           <!-- <p class="tweets-text">Fake/dummy text where needed so that you have some content to visualize.</p> -->
+           <!-- Tweet footer  -->
+           <!-- <footer class="footer-tweets">
             <div class="footer-time">10 days ago</div>
             <div class="footer-icons"> 
               <div class="icon star">&starf;</div> 
               <div class="icon arrow">&#8633;</div> 
               <div class="icon heart">&#9829;</div>
-            </div>
-          </footer>
+            </div> 
+           </footer> -->
+        
         </div>
+      </div>
       </section>
     </main>
+    
+     <!-- App JS -->
+     <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="./scripts/composer-char-counter.js"></script>
+    <!-- Arrow up -->
+    <a href="#tweet-text">
+      <div id="up"class="up">&#8682;</div>
+    </a>
   </body>
 </html>

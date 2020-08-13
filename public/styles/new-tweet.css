@@ -3,7 +3,7 @@
 =============================== */
 
 .main-form{
-    margin-top: 70px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,18 +44,17 @@
        List of all tweets
 =============================== */
 
-/* Whole section with tweets */
-#main-tweets{
+
+
+.main-tweet{
     margin: 70px 0;
-    border:3.5px solid #545149;
     padding: 30px;
     transition: all .1s;
+    border:3.5px solid #545149;
 }
-
-#main-tweets:hover{
-box-shadow: 12px 12px 0px #5d76c2;
-}
-
+.main-tweet:hover{
+    box-shadow: 12px 12px 0px #5d76c2;
+    }
 
 /* Header of tweet */
 .header-tweets, .header-info{
@@ -72,7 +71,7 @@ box-shadow: 12px 12px 0px #5d76c2;
     font-weight: 400;
     transition: all .1s;
 }
-#main-tweets:hover .header-nickname{
+.main-tweet:hover .header-nickname{
     opacity: 1;
     color:#5d76c2;
 }

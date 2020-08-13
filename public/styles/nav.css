@@ -1,17 +1,18 @@
 .nav-top{
-    font-family: 'Bungee', cursive;
     position: fixed;
     top:0;
-    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100vw;
     height: 120px;
+    font-family: 'Bungee', cursive;
+    font-size: 30px;
     background-color: #4056A1;
     color:#fff;
     padding: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     border-bottom:3px solid #fff;
+    z-index: 1;
 }
 
 .nav-new-tweet{
