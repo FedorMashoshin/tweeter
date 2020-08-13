@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -19,7 +13,7 @@ $(document).ready(function() {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = function(tweet) {
     // Data of tweet
@@ -53,7 +47,6 @@ $(document).ready(function() {
       `;
     return $tweet;
   };
-
 
   const $form = $("#form");
   const $text = $('#tweet-text');
@@ -89,6 +82,7 @@ $(document).ready(function() {
     }
   });
 
+  //  ========= Loading tweets from JSON file ========= \\
   const loadTweets = function() {
     $.getJSON(`/tweets`)
       .then((tweets) => {
@@ -102,13 +96,18 @@ $(document).ready(function() {
     $("#up").css("display", "flex");
   });
 
+  // ========= Clicking on up button --> going to the top and focus in input ========= \\
   $("#up").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     $("#tweet-text").focus();
     $("#form").slideDown("slow");
   });
 
+  //  ========= Show and hde our tweet form ========= \\
   $("#nav-tweet").click(function() {
     $("#form").slideToggle("slow");
   });
+
+  // ========= Show all tweets on my page when page is loaded! ========= \\
+  loadTweets();
 });

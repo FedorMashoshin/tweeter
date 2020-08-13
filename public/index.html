@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
@@ -11,15 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/new-tweet.css">
-
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-   
+    <link rel="stylesheet" href="./styles/css/main.css">   
   </head>
 
   <body>
@@ -35,6 +27,7 @@
       </div>
     </nav>
 
+    <div class="content">
     <header class ="header">
       <div class="header-main">
           <img src="/images/profile-hex.png"> 
@@ -61,14 +54,11 @@
         </form>
         
         <!-- ------------------------ Tweets list ------------------------ -->
-   
         <div id= "main-tweets">
-
-
-        <!-- <div  class="main-tweet"> -->
+    <!-- <div  class="main-tweet"> 
    
-          <!-- Tweets header  -->
-           <!-- <header class="header-tweets">
+          Tweets header 
+           <header class="header-tweets">
             <div class="header-info">
                 <img class="header-info-pic" src="./images/face-scan.png" alt="">
                 <span class="header-info-name">Fedor Mashoshin</span>
@@ -76,11 +66,11 @@
             <span class="header-nickname">
               @Bataboomba
             </span>
-          </header> -->
-           <!-- Tweet itself  -->
-           <!-- <p class="tweets-text">Fake/dummy text where needed so that you have some content to visualize.</p> -->
-           <!-- Tweet footer  -->
-           <!-- <footer class="footer-tweets">
+          </header> 
+            Tweet itself  
+            <p class="tweets-text">Fake/dummy text where needed so that you have some content to visualize.</p> 
+            Tweet footer  
+            <footer class="footer-tweets">
             <div class="footer-time">10 days ago</div>
             <div class="footer-icons"> 
               <div class="icon star">&starf;</div> 
@@ -88,15 +78,19 @@
               <div class="icon heart">&#9829;</div>
             </div> 
            </footer> -->
-        
         </div>
       </div>
       </section>
     </main>
-    
+  </div>
+  
+   <!-- External JS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
      <!-- App JS -->
      <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="./scripts/composer-char-counter.js"></script>
+
     <!-- Arrow up -->
     <a href="#tweet-text">
       <div id="up"class="up">&#8682;</div>

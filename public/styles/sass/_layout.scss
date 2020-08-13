@@ -1,0 +1,151 @@
+
+ html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+    /* ============================= 
+             COLORS 
+  =============================  */
+
+  $main-color:#545149;
+  $bg-color:#f4f1ec;
+  $error-color:#f44336;
+  $white-color:#fff;
+  $blue-color:#5d76c2;
+  $dark-blue-color:#4056A1;
+
+   /* ============================= 
+           Flex MIXINS 
+  ============================ */
+  @mixin FlexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin FlexSpaceBetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+ /* ============================= 
+           Font MIXINS 
+  ============================ */
+    @mixin SourceFontReg{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+    }
+  
+    @mixin BungeeFont{
+      font-family: 'Bungee', cursive;
+      font-weight: 700;
+    }
+  /*
+   * Global layout stuff
+   */
+
+  body {
+    @include SourceFontReg;
+    font-size: 24px;
+    color: $main-color;
+    background-color: $bg-color;
+  }
+
+  .white-bold{
+    font-weight: 600;
+  }
+
+  // Class for adding to counter (when length > 140 )
+  .red{
+    color: $error-color;
+  }
+
+  // Error alert
+  .error{
+    display: none;
+    width: 70%;
+    height: 70px;
+    z-index: 10;
+    margin:30px auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 400;
+    background-color: $error-color;
+    color: $bg-color;
+    transition: all .2s;
+  }
+
+  // "UP" arrow
+  .up{
+    @include FlexCenter;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    cursor:pointer;
+    border-radius: 50%;
+    color:$white-color;
+    background-color: $error-color;   
+    opacity: .2;
+    transition: all .2s;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+  
+  .content{
+    margin-top: 120px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+@media screen and (max-width:1280px){
+  .content{
+    flex-direction: column;
+    margin: 0;
+      
+    .header{
+    width: 100vw;
+    margin: 120px 0 20px 0;
+    }
+  
+    main{
+    width: 100vw;
+    margin: 0;
+
+      .main-top{
+        margin: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px){
+  .logo-img{
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px){
+  .nav{
+    &-top{
+      flex-direction: column;
+    }
+    &-new-tweet{
+     display: none;
+   }
+  }
+}
+  
+  /*
+   * Additional CSS can be defined below or in other CSS files, as per instructions
+   */
