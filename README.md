@@ -24,7 +24,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 
 ## Screenshots
-!["Main page of my aplication"](https://github.com/FedorMashoshin/tweeter/blob/master/public/styles/main-page.png)
-!["Main page with hidden twitter input"](https://github.com/FedorMashoshin/tweeter/blob/master/public/styles/main-page-modern.png)
-!["Error message"](https://github.com/FedorMashoshin/tweeter/blob/master/public/styles/Error.png)
-!["Mobile version"](https://github.com/FedorMashoshin/tweeter/blob/master/public/styles/mobile-version.png)
+!["Main page of my aplication"](https://github.com/FedorMashoshin/tweeter/blob/master/public/docs/main-page.png)
+!["Main page with hidden twitter input"](https://github.com/FedorMashoshin/tweeter/blob/master/public/docs/main-page-modern.png)
+!["Error message"](https://github.com/FedorMashoshin/tweeter/blob/master/public/docs/Error.png)
+!["Mobile version"](https://github.com/FedorMashoshin/tweeter/blob/master/public/docs/mobile-version.png)
